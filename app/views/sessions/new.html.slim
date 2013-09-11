@@ -1,0 +1,21 @@
+.row
+	.col-lg-6
+		h1 Войдите
+		p Используйте fizruk на сто процентов! Войдите в свой аккаунт и наслаждайтесь дополнительными возможностями, делитесь своим мнением с другими участниками
+	.col-lg-5.col-lg-offset-1
+		= form_for(:session, url: sessions_path, html: {role: "form"}) do |f|
+
+			.form-group
+				= f.label		:email
+				= f.text_field	:email, class: "form-control"
+
+			.form-group
+				= f.label		:password
+				= f.text_field	:password, class: "form-control"
+
+			.form-group
+				= f.submit "Войти", class: "btn form-control btn-primary"
+		p
+			' Новый пользователь?
+			='	link_to "Регистрация!", signup_path 
+			=	link_to "Восстановление пароля", "#"
