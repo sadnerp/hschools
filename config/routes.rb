@@ -13,5 +13,5 @@ Space::Application.routes.draw do
 		# signin
 		match "/signin"		, to: "sessions#new"
 		# signout
-		match "/signout"	, to: "sessions#destroy"
+		match "/signout"	, to: "sessions#destroy", via: :delete
 end

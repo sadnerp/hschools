@@ -7,15 +7,15 @@
 
 			.form-group
 				= f.label		:email
-				= f.text_field	:email, class: "form-control"
+				= f.text_field	:email, class: "form-control", tabindex: 1
 
 			.form-group
 				= f.label		:password
-				= f.text_field	:password, class: "form-control"
+				= f.text_field	:password, class: "form-control", type: "password", tabindex: 2
 
 			.form-group
-				= f.submit "Войти", class: "btn form-control btn-primary"
+				= f.submit "Войти", class: "btn form-control btn-primary", tabindex: 3
 		p
 			' Новый пользователь?
-			='	link_to "Регистрация!", signup_path 
-			=	link_to "Восстановление пароля", "#"
+			='	link_to "Регистрация!", signup_path,	tabindex: 4
+			=	link_to "Восстановление пароля", "#",	tabindex: 5
